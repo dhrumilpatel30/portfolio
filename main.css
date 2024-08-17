@@ -1,0 +1,69 @@
+body, html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    height: 100%;
+
+}
+
+section {
+    scroll-snap-align: center;
+    width: 100%;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 960px;
+    padding: 0 1rem;
+}
+
+.container, section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-text {
+    font-size: 4rem;
+    border-right: 1px solid;
+}
+
+.left-side {
+    text-align: right;
+}
+
+@media (max-width: 640px) {
+    .about-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .heading-text {
+        font-size: 3.3rem;
+        border-right: none;
+    }
+
+    .left-side {
+        text-align: left;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    .small-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .experience-card {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+}

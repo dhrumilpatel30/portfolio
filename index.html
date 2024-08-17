@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhrumil Patel</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+</head>
+<body class="bg-background-light text-foreground-light dark:bg-background-dark dark:text-foreground-dark font-mono overflow-y-scroll h-full">
+
+<div class="fixed top-4 right-4">
+    <button id="theme-toggle" class="p-2 rounded-full text-2xl">
+        <span id="theme-toggle-dark-icon">☽</span>
+        <span id="theme-toggle-light-icon" class="hidden">☀</span>
+    </button>
+</div>
+
+<!-- About Section -->
+<section id="about" class="min-h-screen flex items-center">
+    <div class="container flex space-x-1 about-section">
+        <div class="heading-text font-bold block flex-1">Dhrumil patel</div>
+        <div class="flex-1 sm:ps-10">
+            <h1 class="text-4xl font-bold">About Me</h1>
+            <p class="mt-4 text-lg indent-8">I'm a passionate and innovative developer focused on building impactful
+                solutions...blah blah blah</p>
+            <p class="mt-4 text-lg indent-8">Nothing special, see below you may find something!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="min-h-screen flex items-center">
+    <div class="container">
+        <h2 class="text-4xl font-bold">Experience</h2>
+        <div class="mt-6 grid gap-4">
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold pb-3">MasterCard</h3>
+                <div class="experience-card">
+
+                    <div>
+                        <p>Software engineering intern</p>
+                        <p>Spring boot, React</p>
+                    </div>
+                    <div class="left-side">
+                        <p>May 2024 to July 2024</p>
+                        <p>Vadodara, Gujarat</p>
+                    </div>
+                </div>
+                <div class="small-text">
+
+                    <ul class="list-disc mt-5 ms-5">
+                        <li>
+                            Developed portal for product owners to manage subscription plans.
+                        </li>
+                        <li>
+                            Experienced product development life cycle and got hands-on experience on agile approaches.
+                        </li>
+                        <li>
+                            Learned and applied various types of automation testing techniques, like functional and unit
+                            testing.
+                        </li>
+                        <li>
+                            Got learning on code quality analysis by sonar.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 grid gap-4">
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold pb-3">Krewbee</h3>
+                <div class="experience-card">
+
+                    <div>
+                        <p>Part time backend engineer</p>
+                        <p>Dotnet APIs, Docker</p>
+                    </div>
+                    <div class="left-side">
+                        <p>December 2023 to April 2024</p>
+                        <p>Remote</p>
+                    </div>
+                </div>
+                <div class="small-text">
+
+                    <ul class="list-disc mt-5 ms-5">
+                        <li>Worked on eight microservices following to the CQRS pattern for hostel management SaaS
+                            service.
+                        </li>
+                        <li>
+                            Developed and maintained REST-ful APIs using ASP.NET Core/Web API within microservices
+                            architecture.
+                        </li>
+                        <li>Experienced unit testing frameworks with xUnit.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="min-h-screen flex items-center">
+    <div class="container">
+        <h2 class="text-4xl font-bold">Projects<span class="text-lg ps-1 font-medium">(More on <a
+                class="font-bold hover:underline text-foreground-secondary-light dark:text-foreground-secondary-dark"
+                target="_blank"
+                href="https://github.com/dhrumilpatel30">GitHub</a>)</span></h2>
+        <div class="mt-6 grid gap-4">
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">PuzzlePro<a
+                        class="font-bold text-lg ps-1 hover:underline text-foreground-secondary-light dark:text-foreground-secondary-dark"
+                        target="_blank" href="https://github.com/PuzzleproAI">(GitHub)</a></h3>
+                <p>Flutter, Python FastAPI, Docker, Azure, CNN, Material UI</p>
+                <div class="small-text">
+
+                    <ul class="list-disc mt-5 ms-5">
+                        <li>Developed an application platform for all in one Sudoku experience. From playing, generating
+                            and scanning Sudoku.
+                        </li>
+                        <li>
+                            Used CNN and OpenCV for scanning Sudoku from the image provided by user.
+                        </li>
+                        <li>Added nice interface in the app using material UI for solving and learning Sudoku.
+                        </li>
+                        <li>Used Azure to deploy docker image of backend using CI/CD by GitHub actions.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 grid gap-4">
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">TestZone<a
+                        class="font-bold text-lg ps-1 hover:underline dark:text-foreground-secondary-dark"
+                        target="_blank" href="https://github.com/dhrumilpatel30/TestZone">(GitHub)</a></h3>
+                <p>Java, Spring boot, JSPs, Hibernate, MySQL, Bootstrap, Azure</p>
+                <div class="small-text">
+
+                    <ul class="list-disc mt-5 ms-5">
+                        <li>Developed a web application platform for Quizzes in Java Spring boot.
+                        </li>
+                        <li>
+                            Implemented features such as registration and login, quiz creation and management, quiz
+                            taking and
+                            submission, result calculation and display.
+                        </li>
+                        <li>Used Azure to deploy it as web app as well as for MySQL database.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="min-h-screen flex items-center">
+    <div class="container">
+        <h2 class="text-4xl font-bold">Education</h2>
+        <div class="mt-6 grid gap-4">
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-lg">
+                <h3 class="text-2xl font-semibold pb-2">Dharmsinh Desai University</h3>
+
+                <div class="experience-card">
+
+                    <div>
+                        <p>Bachelor of Technology in Computer Engineering</p>
+                    </div>
+                    <div class="left-side">
+                        <p>
+                            October 2021 to May 2025</p>
+                        <p>Nadiad, Gujarat</p>
+                    </div>
+                </div>
+                <p>· final year student</p>
+                <p>· 9.08 CPI till 3rd year</p>
+            </div>
+        </div>
+        <div class="mt-6 grid gap-4">
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-lg">
+                <h3 class="text-2xl font-semibold pb-2">Jawahar Navodaya Vidyalaya</h3>
+
+                <p>HSC & SSC</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="min-h-screen flex items-center">
+    <div class="container">
+        <h2 class="text-4xl font-bold">Skills</h2>
+        <div class="mt-6 grid md:grid-cols-3 sm:grid-cols-2 gap-4">
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-md">
+                <h3 class="text-2xl font-semibold">Backend</h3>
+                <ul class="mt-2">
+                    <li>Spring boot</li>
+                    <li>Dotnet</li>
+                    <li>Node.js</li>
+                    <li>Django</li>
+                </ul>
+            </div>
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-md">
+                <h3 class="text-2xl font-semibold">Frontend</h3>
+                <ul class="mt-2">
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>Redux</li>
+                </ul>
+            </div>
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-md">
+                <h3 class="text-2xl font-semibold">Tools</h3>
+                <ul class="mt-2">
+                    <li>Git</li>
+                    <li>Docker</li>
+                    <li>Azure and AWS</li>
+                </ul>
+            </div>
+
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-md">
+                <h3 class="text-2xl font-semibold">Testing</h3>
+                <ul class="mt-2">
+                    <li>Good hand on writing quality automation tests in almost all frameworks</li>
+                </ul>
+            </div>
+            <div class="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-md">
+                <ul class="mt-2">
+                    <li>Any many more</li>
+                    <li>Always open for new skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="min-h-screen flex items-center">
+    <div class="container">
+        <h2 class="text-4xl font-bold">Contact</h2>
+        <p class="mt-4">Email: <a href="mailto:dhrumilp063@gmail.com"
+                                  class="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline">dhrumilp063@gmail.com</a>
+        </p>
+
+        <p class="mt-2">Resume: <a target="_blank" href="./resume.pdf"
+                                   class="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline">View</a>
+            or
+            <button id="copy-link-button"
+                    class="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline">Copy
+                Link
+            </button>
+            <span id="copy-confirmation" class="absolute ml-2 text-green-500 opacity-0 transition-opacity duration-500">✓ Copied!</span>
+        </p>
+        <p class="mt-2">LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/dhrumilpatel30/"
+                                     class="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline">@dhrumilpatel30</a>
+        </p>
+        <p class="mt-2">GitHub: <a target="_blank" href="https://github.com/dhrumilpatel30/"
+                                   class="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline">@dhrumilpatel30</a>
+        </p>
+        <p class="mt-2">Leetcode: <a target="_blank" href="https://leetcode.com/dhrumilpatel30/"
+                                     class="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline">@dhrumilpatel30</a>
+        </p>
+
+        <p class="mt-2">X(Twitter): <a target="_blank" href="https://twitter.com/dhrumilpatel30/"
+                                       class="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline">@dhrumilpatel30</a>
+        </p>
+    </div>
+</section>
+
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    themeToggleBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+
+        darkIcon.classList.toggle('hidden');
+        lightIcon.classList.toggle('hidden');
+    });
+    if (document.documentElement.classList.contains('dark')) {
+        darkIcon.classList.remove('hidden');
+        lightIcon.classList.add('hidden');
+    } else {
+        darkIcon.classList.add('hidden');
+        lightIcon.classList.remove('hidden');
+    }
+    document.getElementById('copy-link-button').addEventListener('click', function () {
+        const link = document.querySelector('a[href="./resume.pdf"]').href;
+        navigator.clipboard.writeText(link).then(function () {
+            const confirmation = document.getElementById('copy-confirmation');
+            confirmation.classList.remove('opacity-0');
+            confirmation.classList.add('opacity-100');
+
+            setTimeout(() => {
+                confirmation.classList.remove('opacity-100');
+                confirmation.classList.add('opacity-0');
+            }, 2000);
+        });
+    });
+</script>
+</body>
+</html>
