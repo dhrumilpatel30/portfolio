@@ -1,16 +1,8 @@
-@font-face {
-    font-family: 'Geist Mono';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('./fonts/GeistMonoVF.woff2') format('woff2');
-}
-
 body, html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     height: 100%;
-
+    position: relative;
 }
 
 section {
@@ -30,9 +22,11 @@ section {
     margin-right: auto;
 }
 
+.heading-section{
+    border-left: 1px solid;
+}
 .heading-text {
     font-size: 4rem;
-    border-right: 1px solid;
 }
 
 .left-side {
@@ -48,7 +42,10 @@ section {
 
     .heading-text {
         font-size: 3.3rem;
-        border-right: none;
+    }
+    .heading-section{
+
+        border-left: none;
     }
 
     .left-side {
