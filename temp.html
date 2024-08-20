@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Gradient Background Effect</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .gradient-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, #ff9a9e, #fad0c4, #fad0c4, #fad0c4, #ff9a9e);
+      transition: background 0.3s ease;
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="gradient-background"></div>
+
+  <script>
+    const gradientBackground = document.querySelector('.gradient-background');
+
+    document.addEventListener('mousemove', (event) => {
+      const { clientX, clientY } = event;
+      const x = (clientX / window.innerWidth) * 100;
+      const y = (clientY / window.innerHeight) * 100;
+
+      gradientBackground.style.background = `radial-gradient(circle at ${x}% ${y}%, #ff9a9e, #fad0c4)`;
+    });
+  </script>
+</body>
+</html>

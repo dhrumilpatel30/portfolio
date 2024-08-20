@@ -4,7 +4,7 @@ export default {
     content: ["./index.html"],
     theme: {
         fontFamily: {
-            'mono': ["'Geist Mono'",'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "'Liberation Mono'", "'Courier New'", 'monospace'],
+            'mono': ["'Geist Mono'", 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "'Liberation Mono'", "'Courier New'", 'monospace'],
         },
         colors: {
             transparent: 'transparent',
@@ -27,6 +27,7 @@ export default {
             ]
         }
     },
-    plugins: [],
+    plugins: [
+    ],
 }
 
