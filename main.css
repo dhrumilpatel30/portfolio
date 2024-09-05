@@ -14,6 +14,7 @@ section {
 .container {
     max-width: 960px;
     padding: 0 1rem;
+    font-size: 1.2rem;
 }
 
 .container, section {
@@ -26,13 +27,15 @@ section {
 }
 
 .heading-text {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .left-side {
     text-align: right;
 }
-
+li{
+    margin-bottom: 0.4rem;
+}
 @media (max-width: 640px) {
     .about-section {
         display: grid;
@@ -41,6 +44,9 @@ section {
         background: transparent;
     }
 
+    .container{
+        font-size: 1.1rem;
+    }
     .heading-text {
         font-size: 3.3rem;
     }
@@ -59,11 +65,9 @@ section {
     }
 
     p {
-        font-size: 0.875rem;
     }
 
     .small-text {
-        font-size: 0.8rem;
     }
 }
 
