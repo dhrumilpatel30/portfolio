@@ -129,7 +129,3 @@ a {
 .dark a {
   color: #b39561;
 }
-
-@theme {
-  --font-display: "Commissioner", sans-serif;
-}

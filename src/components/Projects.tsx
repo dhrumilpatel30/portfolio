@@ -28,32 +28,35 @@ const Projects = () => {
                 (GitHub)
               </a>
             </div>
-            <p>Flutter, Python FastAPI, Docker, Azure, CNN, Material UI</p>
+            <p>
+              Flutter, Python Fast API, Docker, Azure, Machine Learning(CNN){" "}
+            </p>
             <div className="small-text">
               <ul className="list-disc mt-5 ms-5">
                 <li>
-                  Developed an all-in-one <strong>Sudoku application</strong>,
+                  Developed an <strong>all-in-one Sudoku application</strong>,
                   providing a comprehensive experience with features such as{" "}
                   <strong>Sudoku generation, hints, solutions</strong>, and
                   more.
                 </li>
                 <li>
                   Implemented a feature for{" "}
-                  <strong>scanning Sudoku images</strong>
-                  using a <strong>Convolutional Neural Network (CNN)</strong>
+                  <strong>scanning Sudoku images</strong> using a{" "}
+                  <strong>Convolutional Neural Network (CNN) </strong>
                   model, enhancing the application's functionality and accuracy.
                 </li>
                 <li>
-                  Designed an intuitive interface with{" "}
-                  <strong>Material UI</strong>, improving user engagement and
-                  ease of use for <strong>solving and learning Sudoku</strong>.
+                  Designed an <strong>intuitive interface</strong> with Material
+                  UI, improving user engagement and ease of use for{" "}
+                  <strong>solving and learning Sudoku</strong>.
                 </li>
                 <li>
-                  Streamlined back-end deployment by containerizing the
-                  application with
-                  <strong>Docker</strong> and deploying it on{" "}
-                  <strong>Azure</strong>, using <strong>CI/CD pipelines</strong>{" "}
-                  with GitHub Actions for efficient and automated updates.
+                  Streamlined <strong>back-end deployment</strong> by
+                  containerizing the application with <strong>Docker</strong>{" "}
+                  and deploying it on
+                  <strong> Azure</strong>, using{" "}
+                  <strong>CI/CD pipelines</strong> with GitHub Actions for
+                  efficient and automated updates.
                 </li>
               </ul>
             </div>

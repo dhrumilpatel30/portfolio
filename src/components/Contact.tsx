@@ -28,6 +28,16 @@ const Contact = () => {
         </p>
 
         <p className="mt-2">
+          GitHub:{" "}
+          <a
+            target="_blank"
+            href="https://github.com/dhrumilpatel30/"
+            className="hover:underline"
+          >
+            @dhrumilpatel30
+          </a>
+        </p>
+        <p className="mt-2">
           Resume:{" "}
           <a target="_blank" href="./resume.pdf" className="hover:underline">
             View
@@ -50,36 +60,6 @@ const Contact = () => {
             target="_blank"
             href="https://www.linkedin.com/in/dhrumilpatel30/"
             className="hover:underline"
-          >
-            @dhrumilpatel30
-          </a>
-        </p>
-        <p className="mt-2">
-          GitHub:{" "}
-          <a
-            target="_blank"
-            href="https://github.com/dhrumilpatel30/"
-            className="hover:underline"
-          >
-            @dhrumilpatel30
-          </a>
-        </p>
-        <p className="mt-2">
-          Leetcode:{" "}
-          <a
-            target="_blank"
-            href="https://leetcode.com/dhrumilpatel30/"
-            className="hover:underline"
-          >
-            @dhrumilpatel30
-          </a>
-        </p>
-        <p className="mt-2">
-          X(Twitter):{" "}
-          <a
-            target="_blank"
-            href="https://x.com/dhrumilpatel30/"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
           >
             @dhrumilpatel30
           </a>
