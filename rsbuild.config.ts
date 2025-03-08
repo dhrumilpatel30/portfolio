@@ -44,7 +44,7 @@ export default defineConfig({
     cssModules: {
       auto: true,
     },
-    assetPrefix: '/portfolio/',
+    assetPrefix: 'https://dhrumil.live',
   },
   performance: {
     chunkSplit: {
