@@ -44,6 +44,7 @@ export default defineConfig({
     cssModules: {
       auto: true,
     },
+    assetPrefix: '/portfolio/',
   },
   performance: {
     chunkSplit: {
