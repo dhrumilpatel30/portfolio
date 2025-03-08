@@ -2,16 +2,16 @@ const Education = () => {
   return (
     <section id="education" className="flex">
       <div className="container">
-        <h2 className="text-3xl font-bold">Education</h2>
+        <div className="text-4xl font-bold">Education</div>
         <div className="mt-6 grid gap-4">
-          <div className="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-lg">
-            <h3 className="text-2xl font-semibold pb-2">
+          <div>
+            <div className="text-3xl font-semibold pb-2">
               Dharmsinh Desai University
-            </h3>
+            </div>
             <div className="experience-card">
               <div>
                 <p>Bachelor of Technology in Computer Engineering</p>
-                <p>9.08 CPI</p>
+                <p>9.03 CPI</p>
               </div>
               <div className="left-side">
                 <p>October 2021 to May 2025</p>
@@ -22,10 +22,10 @@ const Education = () => {
           </div>
         </div>
         <div className="mt-6 grid gap-4">
-          <div className="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg text-lg">
-            <h3 className="text-2xl font-semibold pb-2">
+          <div>
+            <div className="text-3xl font-semibold pb-2">
               Jawahar Navodaya Vidyalaya
-            </h3>
+            </div>
             <p>HSC & SSC</p>
           </div>
         </div>

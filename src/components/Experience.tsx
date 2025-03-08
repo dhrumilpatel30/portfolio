@@ -2,10 +2,10 @@ const Experience = () => {
   return (
     <section id="experience" className="flex">
       <div className="container">
-        <h2 className="text-3xl font-bold">Experience</h2>
+        <div className="text-4xl font-bold">Experience</div>
         <div className="mt-6 grid gap-4">
-          <div className="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold pb-3">MasterCard</h3>
+          <div>
+            <div className="text-3xl font-semibold pb-3">MasterCard</div>
             <div className="experience-card">
               <div>
                 <p>Software engineering intern</p>
@@ -49,8 +49,8 @@ const Experience = () => {
           </div>
         </div>
         <div className="mt-6 grid gap-4">
-          <div className="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold pb-3">Krewbee</h3>
+          <div>
+            <div className="text-3xl font-semibold pb-3">Krewbee</div>
             <div className="experience-card">
               <div>
                 <p>Backend engineer</p>

@@ -6,7 +6,7 @@ const About = () => {
           <div className="heading-text font-bold">Dhrumil Patel</div>
         </div>
         <div className="flex-1 sm:ps-24 heading-section">
-          <h1 className="text-3xl font-bold">About Me</h1>
+          <div className="text-3xl font-bold">About Me</div>
           <p className="mt-4 indent-8 text-xl">
             I'm a passionate and innovative developer focused on building
             impactful solutions...blah blah blah

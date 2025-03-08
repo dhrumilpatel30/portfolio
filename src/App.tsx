@@ -7,7 +7,6 @@ import Experience from "./components/Experience";
 import MouseEffect from "./components/MouseEffect";
 import Projects from "./components/Projects";
 import ThemeToggle from "./components/ThemeToggle";
-
 // Add type declaration for Google Analytics
 declare global {
   interface Window {
@@ -36,7 +35,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="shiny bg-background-light text-foreground-light dark:bg-background-dark dark:text-foreground-dark font-sans overflow-y-scroll h-full">
+    <div className="shiny h-full dark:bg-[#100e05] dark:text-[#ccc8c1] bg-red">
       <div className="body-full">
         <ThemeToggle />
         <About />

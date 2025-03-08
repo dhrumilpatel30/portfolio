@@ -2,12 +2,12 @@ const Projects = () => {
   return (
     <section id="projects" className="flex">
       <div className="container">
-        <h2 className="text-3xl font-bold">
+        <div className="text-4xl font-bold">
           Projects
-          <span className="text-lg ps-1 font-medium">
+          <span className="text-lg ps-2 font-medium">
             (More on{" "}
             <a
-              className="font-bold hover:underline text-foreground-secondary-light dark:text-foreground-secondary-dark"
+              className="font-bold hover:underline text-blue-600 dark:text-blue-400"
               target="_blank"
               href="https://github.com/dhrumilpatel30"
             >
@@ -15,19 +15,19 @@ const Projects = () => {
             </a>
             )
           </span>
-        </h2>
+        </div>
         <div className="mt-6 grid gap-4">
-          <div className="bg-background-secondary-light dark:bg-background-secondary-dark p-4 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold">
+          <div>
+            <div className="text-3xl font-semibold">
               PuzzlePro
               <a
-                className="font-bold text-lg ps-1 hover:underline text-foreground-secondary-light dark:text-foreground-secondary-dark"
+                className="font-bold text-lg ps-2 hover:underline text-blue-600 dark:text-blue-400"
                 target="_blank"
                 href="https://github.com/PuzzleproAI"
               >
                 (GitHub)
               </a>
-            </h3>
+            </div>
             <p>Flutter, Python FastAPI, Docker, Azure, CNN, Material UI</p>
             <div className="small-text">
               <ul className="list-disc mt-5 ms-5">

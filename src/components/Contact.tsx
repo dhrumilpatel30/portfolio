@@ -16,35 +16,28 @@ const Contact = () => {
   return (
     <section id="contact" className="flex">
       <div className="container">
-        <h2 className="text-3xl font-bold">Contact</h2>
+        <div className="text-4xl font-bold">Contact</div>
         <p className="mt-4">
           Email:{" "}
           <a
             href="mailto:dhrumil.connect@gmail.com"
-            className="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline"
+            className="hover:underline"
           >
-            dhrumil.connect@gmail.com
+            dhrumilp063@gmail.com
           </a>
         </p>
 
         <p className="mt-2">
           Resume:{" "}
-          <a
-            target="_blank"
-            href="./resume.pdf"
-            className="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline"
-          >
+          <a target="_blank" href="./resume.pdf" className="hover:underline">
             View
           </a>{" "}
           or{" "}
-          <button
-            onClick={handleCopyLink}
-            className="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline"
-          >
+          <a onClick={handleCopyLink} className="hover:underline">
             Copy Link
-          </button>
+          </a>
           <span
-            className={`ml-2 text-green-500 transition-opacity duration-500 ${
+            className={`ml-2 transition-opacity duration-500 ${
               copyConfirmation ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -56,7 +49,7 @@ const Contact = () => {
           <a
             target="_blank"
             href="https://www.linkedin.com/in/dhrumilpatel30/"
-            className="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline"
+            className="hover:underline"
           >
             @dhrumilpatel30
           </a>
@@ -66,7 +59,7 @@ const Contact = () => {
           <a
             target="_blank"
             href="https://github.com/dhrumilpatel30/"
-            className="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline"
+            className="hover:underline"
           >
             @dhrumilpatel30
           </a>
@@ -76,7 +69,7 @@ const Contact = () => {
           <a
             target="_blank"
             href="https://leetcode.com/dhrumilpatel30/"
-            className="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline"
+            className="hover:underline"
           >
             @dhrumilpatel30
           </a>
@@ -86,7 +79,7 @@ const Contact = () => {
           <a
             target="_blank"
             href="https://x.com/dhrumilpatel30/"
-            className="text-foreground-secondary-light dark:text-foreground-secondary-dark hover:underline"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
           >
             @dhrumilpatel30
           </a>
