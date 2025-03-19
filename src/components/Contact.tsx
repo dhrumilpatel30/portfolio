@@ -16,27 +16,7 @@ const Contact = () => {
   return (
     <section id="contact" className="flex">
       <div className="container">
-        <div className="text-4xl font-bold">Contact</div>
-        <p className="mt-4">
-          Email:{" "}
-          <a
-            href="mailto:dhrumil.connect@gmail.com"
-            className="hover:underline"
-          >
-            dhrumilp063@gmail.com
-          </a>
-        </p>
-
-        <p className="mt-2">
-          GitHub:{" "}
-          <a
-            target="_blank"
-            href="https://github.com/dhrumilpatel30/"
-            className="hover:underline"
-          >
-            @dhrumilpatel30
-          </a>
-        </p>
+        <div className="text-4xl font-bold mb-4">Contact</div>
         <p className="mt-2">
           Resume:{" "}
           <a target="_blank" href="./resume.pdf" className="hover:underline">
@@ -53,6 +33,26 @@ const Contact = () => {
           >
             ✓ Copied!
           </span>
+        </p>
+        <p className="mt-2">
+          Email:{" "}
+          <a
+            href="mailto:dhrumilpateldev@gmail.com"
+            className="hover:underline"
+          >
+            dhrumilpateldev@gmail.com
+          </a>
+        </p>
+
+        <p className="mt-2">
+          GitHub:{" "}
+          <a
+            target="_blank"
+            href="https://github.com/dhrumilpatel30/"
+            className="hover:underline"
+          >
+            @dhrumilpatel30
+          </a>
         </p>
         <p className="mt-2">
           LinkedIn:{" "}
