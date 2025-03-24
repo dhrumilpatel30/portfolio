@@ -121,8 +121,8 @@ const Experience = () => {
                 <li>
                   Enhanced project management skills through effective use of{" "}
                   <strong>Jira</strong> and <strong>Confluence</strong>, and
-                  refined <strong>Git</strong>
-                  expertise to streamline version control and collaboration.
+                  refined <strong>Git</strong> expertise to streamline version
+                  control and collaboration.
                 </li>
               </ul>
             </div>
