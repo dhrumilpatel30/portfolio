@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 @import "tailwindcss";
+@font-face {
+  font-family: "Commissioner";
+  src: url("../public/Commissioner/Commissioner-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Commissioner";
+  src: url("../public/Commissioner/Commissioner-Regular.ttf");
+  font-weight: normal;
+}
 
 body,
 html {

@@ -12,31 +12,6 @@ export default defineConfig({
       keywords: 'Dhrumil Patel, software developer, portfolio, web development, React, Spring Boot, projects, contact',
       author: 'Dhrumil Patel',
     },
-    tags: [
-      {
-        tag: 'link',
-        attrs: {
-          rel: 'preconnect',
-          href: 'https://fonts.googleapis.com',
-        },
-      },
-      {
-        tag: 'link',
-        attrs: {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossorigin: true,
-        },
-      },
-      {
-        tag: 'link',
-        attrs: {
-          rel: 'preload',
-          as: 'style',
-          href: 'https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap',
-        },
-      },
-    ],
   },
   output: {
     minify: true,
@@ -44,7 +19,7 @@ export default defineConfig({
     cssModules: {
       auto: true,
     },
-    assetPrefix: 'https://dhrumil.live',
+    assetPrefix: 'https://dhrumilpatel.dev',
   },
   performance: {
     chunkSplit: {
