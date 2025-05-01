@@ -10,15 +10,19 @@ const Education = () => {
             </div>
             <div className="experience-card">
               <div>
-                <p>Bachelor of Technology in Computer Engineering</p>
-                <p>9.03 CPI</p>
+                <p>
+                  <strong>Bachelor of Technology</strong> in{" "}
+                  <strong>Computer Engineering</strong>
+                </p>
+                <p>
+                  <strong>9.15 CPI</strong>
+                </p>
               </div>
               <div className="left-side">
                 <p>October 2021 to May 2025</p>
                 <p>Nadiad, Gujarat</p>
               </div>
             </div>
-            <p>· final year student</p>
           </div>
         </div>
         <div className="mt-6 grid gap-4">

@@ -8,35 +8,58 @@ const Experience = () => {
             <div className="text-3xl font-semibold pb-3">Pleasantbiz</div>
             <div className="experience-card">
               <div>
-                <p>Software Engineering Intern</p>
+                <p>Software Engineer (Part-time + Intern)</p>
                 <p>
-                  Frappe, Python, MariaDB, Docker, Azure, Blob storage, Restic
+                  <strong>Frappe</strong>, <strong>Python</strong>,{" "}
+                  <strong>Azure</strong>, <strong>Ory</strong>,{" "}
+                  <strong>Pub-Sub Model</strong>, <strong>Restic</strong>
                 </p>
               </div>
               <div className="left-side">
-                <p>Sep 2023 - Present (7 months)</p>
+                <p>Sep 2024 - Apr 2025 (8 months)</p>
                 <p>Remote</p>
               </div>
             </div>
             <div className="small-text">
               <ul className="list-disc mt-5 ms-5">
                 <li>
-                  Designed and created company wide{" "}
-                  <strong>authentication server</strong> with Ory Kratos, Keto
-                  and OAuthKeeper.
+                  Managed and deployed infrastructure across{" "}
+                  <strong>Azure</strong> using <strong>Container Apps</strong>,{" "}
+                  <strong>Blob Storage</strong>, <strong>Service Bus</strong>,{" "}
+                  <strong>Functions</strong>, <strong>VMs</strong>, and
+                  maintained <strong>dev</strong>, <strong>UAT</strong>, and{" "}
+                  <strong>production</strong> environments.
                 </li>
                 <li>
-                  Self hosted <strong>ERPNext software</strong> with multi
-                  company setup written in Frappe framework in azure using Azure
-                  container apps and Github Actions.
+                  Self-hosted and extended <strong>ERPNext</strong> with{" "}
+                  <strong>multi-company setup</strong>, including custom modules
+                  like <strong>hostel management</strong>, deployed via{" "}
+                  <strong>GitHub Actions</strong> and <strong>Docker</strong>.
                 </li>
                 <li>
-                  Added additional features for custom use case like{" "}
-                  <strong>hostel management</strong> in self hosted ERPNext.
+                  Integrated <strong>Razorpay</strong> and{" "}
+                  <strong>CCAvenue</strong> payment gateways; built{" "}
+                  <strong>automation flows</strong> for tasks like invoice
+                  generation.
                 </li>
                 <li>
-                  Created <strong>automated backups</strong> with Restic in
-                  Azure blob containers, Scheduled with cron jobs.
+                  Developed a <strong>publisher-subscriber system</strong> on{" "}
+                  <strong>Azure Service Bus</strong> with a custom Frappe app
+                  for publishing messages with{" "}
+                  <strong>dynamic message templates</strong> and rendering
+                  logic.
+                </li>
+                <li>
+                  Designed and implemented an{" "}
+                  <strong>authentication and authorization network</strong>{" "}
+                  using <strong>Ory Kratos</strong>, <strong>Keto</strong>, and{" "}
+                  <strong>OAuthKeeper</strong> with{" "}
+                  <strong>role-based access control</strong>.
+                </li>
+                <li>
+                  Automated and scheduled <strong>encrypted database</strong>{" "}
+                  and file backups via <strong>Restic</strong> to{" "}
+                  <strong>Azure Blob Storage</strong> using cron jobs.
                 </li>
               </ul>
             </div>
@@ -48,10 +71,14 @@ const Experience = () => {
             <div className="experience-card">
               <div>
                 <p>Software Engineering Intern</p>
-                <p>Spring boot, React, PCF, Oracle, OpenAPI, Redux</p>
+                <p>
+                  <strong>Spring boot</strong>, <strong>React</strong>,{" "}
+                  <strong>PCF</strong>, <strong>Oracle</strong>,{" "}
+                  <strong>OpenAPI</strong>, <strong>Redux</strong>
+                </p>
               </div>
               <div className="left-side">
-                <p>May 2023 - July 2023 (2 months)</p>
+                <p>May 2024 - July 2024 (2 months)</p>
                 <p>Vadodara, Gujarat</p>
               </div>
             </div>
@@ -91,20 +118,25 @@ const Experience = () => {
             <div className="text-3xl font-semibold pb-3">KrewBee</div>
             <div className="experience-card">
               <div>
-                <p>Software Engineer, Backend (Part-time)</p>
-                <p>Dotnet, Postgres, Docker, Azure, Blob storage</p>
+                <p>Software Engineer, Backend</p>
+                <p>
+                  <strong>Dotnet</strong>, <strong>Postgres</strong>,{" "}
+                  <strong>Docker</strong>, <strong>Azure</strong>,{" "}
+                  <strong>Blob storage</strong>
+                </p>
               </div>
               <div className="left-side">
-                <p>Dec 2022 - April 2023 (5 months)</p>
-                <p>Remote</p>
+                <p>Dec 2023 - April 2024 (5 months)</p>
+                <p>Remote (Part-time)</p>
               </div>
             </div>
             <div className="small-text">
               <ul className="list-disc mt-5 ms-5">
                 <li>
-                  Developed a <strong>SaaS based hostel management</strong> back
-                  end, leveraging <strong>.NET API</strong> to create RESTful
-                  APIs within a micro-services architecture, and containerized
+                  Developed a <strong>SaaS-based hostel management</strong>{" "}
+                  backend, leveraging <strong>.NET API</strong> to create{" "}
+                  <strong>RESTful APIs</strong> within a{" "}
+                  <strong>microservices architecture</strong>, and containerized
                   the services using <strong>Docker</strong> for deployment.
                 </li>
                 <li>
@@ -115,8 +147,8 @@ const Experience = () => {
                   into manageable components.
                 </li>
                 <li>
-                  Mastered unit testing with <strong>xUnit</strong>, for robust
-                  code through various testing strategies.
+                  Mastered unit testing with <strong>xUnit</strong> to ensure
+                  robust code through various testing strategies.
                 </li>
                 <li>
                   Enhanced project management skills through effective use of{" "}
