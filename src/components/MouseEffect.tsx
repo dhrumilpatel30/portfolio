@@ -19,7 +19,7 @@ const MouseEffect = () => {
     };
   }, []);
 
-  return <div className="overlay"></div>;
+  return <div className="overlay hidden sm:block"></div>;
 };
 
 export default MouseEffect;
