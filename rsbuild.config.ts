@@ -23,6 +23,7 @@ export default defineConfig({
     polyfill: 'usage',
     injectStyles: false,
     inlineStyles: true,
+    inlineScripts: true,
   },
   performance: {
     chunkSplit: {
