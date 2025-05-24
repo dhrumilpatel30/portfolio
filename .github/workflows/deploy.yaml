@@ -25,7 +25,10 @@ jobs:
         run: npm i # Or bun install, etc.
 
       - name: Install platform-specific Rspack binding
-        run: npm install --save-dev @rspack/binding-linux-x64-gnu
+        run: |
+          npm install @rspack/binding-linux-x64-gnu
+          npm install @tailwindcss/oxide-linux-x64-gnu
+          npm install lightningcss-linux-x64-gnu
 
       - name: Build
         run: npm run build
