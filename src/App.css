@@ -1,13 +1,13 @@
 @import "tailwindcss";
 @font-face {
   font-family: "Commissioner";
-  src: url("../public/Commissioner/Commissioner-Bold.ttf");
+  src: url("../public/Commissioner/Commissioner-Bold.woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Commissioner";
-  src: url("../public/Commissioner/Commissioner-Regular.ttf");
+  src: url("../public/Commissioner/Commissioner-Regular.woff2");
   font-weight: normal;
 }
 

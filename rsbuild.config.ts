@@ -12,6 +12,28 @@ export default defineConfig({
       keywords: 'Dhrumil Patel, software developer, portfolio, web development, React, Spring Boot, projects, contact',
       author: 'Dhrumil Patel',
     },
+    tags: [
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'preload',
+          href: '/Commissioner/Commissioner-Regular.woff2',
+          as: 'font',
+          type: 'font/ttf',
+          crossorigin: 'anonymous'
+        }
+      },
+      {
+        tag: 'link',
+        attrs: {
+          rel: 'preload',
+          href: '/Commissioner/Commissioner-Bold.woff2',
+          as: 'font',
+          type: 'font/ttf',
+          crossorigin: 'anonymous'
+        }
+      }
+    ]
   },
   output: {
     minify: true,
