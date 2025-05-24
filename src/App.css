@@ -1,23 +1,39 @@
 @import "tailwindcss";
+
 @font-face {
   font-family: "Commissioner";
-  src: url("../public/Commissioner/Commissioner-Bold.woff2");
+  src: url("../public/Commissioner/Commissioner-Bold.woff2") format("woff2");
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Commissioner";
-  src: url("../public/Commissioner/Commissioner-Regular.woff2");
+  src: url("../public/Commissioner/Commissioner-Regular.woff2") format("woff2");
   font-weight: normal;
+  font-display: swap;
 }
 
 body,
 html {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   height: 100%;
   overflow-y: auto;
   font-family: "Commissioner", sans-serif;
+}
+/* Fix: Ensure the main container covers full viewport */
+.shiny {
+  min-height: 100vh; /* Add this to ensure full coverage */
+  background-color: #e8e4dd;
+  color: #141310;
+}
+
+.dark .shiny {
+  min-height: 100vh; /* Add this to ensure full coverage */
+  background-color: #0a0908;
+  color: #e8e4dd;
 }
 
 section {
@@ -120,16 +136,6 @@ li {
 .body-full {
   position: relative;
   z-index: 1;
-}
-
-.shiny {
-  background-color: #e8e4dd;
-  color: #141310;
-}
-
-.dark .shiny {
-  background-color: #0a0908;
-  color: #e8e4dd;
 }
 
 a {

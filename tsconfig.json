@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "ES2020"],
-    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"], // Added DOM.Iterable for better DOM support
     "target": "ES2020",
     "noEmit": true,
     "skipLibCheck": true,
@@ -17,7 +16,16 @@
     /* type checking */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+
+    /* Additional helpful options for DOM work */
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*",
+    "src/index.html" // Explicitly include your HTML file
+  ],
+  "exclude": ["node_modules", "dist"]
 }
