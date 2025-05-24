@@ -1,20 +1,16 @@
-# .github/workflows/cloudflare-pages-deploy.yml (you can rename the file)
+# .github/workflows/cloudflare-pages-deploy.yml
 name: Deploy to Cloudflare Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN (Cloudflare Pages action might not need all of these, but good to have for checkout)
 permissions:
   contents: read
-  # deployments: write # Optional: if you want to see deployments in GitHub environments
 
 jobs:
-  publish: # Renamed job for clarity
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,22 +21,11 @@ jobs:
         with:
           node-version: 22 # Or your preferred Node.js version
 
-      # If you use other package managers like yarn or pnpm,
-      # you will need to install them first.
-      # If using bun, you'd use actions/setup-bun@v1
       - name: Install dependencies
-        run: npm i # Or bun install, yarn install, pnpm install
+        run: npm i # Or bun install, etc.
 
-      # The platform-specific Rspack bindings are usually handled by npm/yarn/pnpm
-      # during the main `npm i` if your package.json is set up correctly
-      # with optionalDependencies or CPU/OS specific dependencies.
-      # If `npm i` doesn't cover it, you might still need these, but often it's not required.
-      # Test without them first.
-      # - name: Install platform-specific Rspack binding (if needed)
-      #   run: |
-      #     npm install @rspack/binding-linux-x64-gnu
-      #     npm install @tailwindcss/oxide-linux-x64-gnu
-      #     npm install lightningcss-linux-x64-gnu
+      - name: Install platform-specific Rspack binding
+        run: npm install --save-dev @rspack/binding-linux-x64-gnu
 
       - name: Build
         run: npm run build
@@ -50,5 +35,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: portfolio # Replace with your Cloudflare Pages project name
-          directory: ./dist # The directory your build command outputs to
+          projectName: portfolio
+          directory: ./dist
