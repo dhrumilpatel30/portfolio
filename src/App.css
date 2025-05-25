@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+body {
+  font-family: sans-serif; /* Fallback */
+  opacity: 0; /* Initially hide to prevent FOUT */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+body.fonts-loaded {
+  font-family: "Commissioner", sans-serif;
+  opacity: 1; 
+}
+
 @font-face {
   font-family: "Commissioner";
   src: url("../public/Commissioner/Commissioner-Bold.woff2") format("woff2");
@@ -24,6 +35,15 @@ html {
   font-family: "Commissioner", sans-serif;
 }
 /* Fix: Ensure the main container covers full viewport */
+html {
+  background-color: #e8e4dd; /* Light theme default background */
+  color: #141310;           /* Light theme default text color */
+}
+
+html.dark {
+  background-color: #0a0908; /* Dark theme default background */
+  color: #e8e4dd;           /* Dark theme default text color */
+}
 .shiny {
   min-height: 100vh; /* Add this to ensure full coverage */
   background-color: #e8e4dd;

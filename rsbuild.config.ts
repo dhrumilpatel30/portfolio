@@ -26,6 +26,8 @@ export default defineConfig({
     inlineScripts: true,
   },
   performance: {
+    prefetch: true,
+    preload: true,
     chunkSplit: {
       strategy: 'all-in-one',
     },

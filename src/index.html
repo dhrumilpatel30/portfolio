@@ -3,6 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          var applyDark = false;
+
+          if (storedTheme === "dark") {
+            applyDark = true;
+          } else if (storedTheme === "light") {
+            applyDark = false;
+          } else if (prefersDark) {
+            // No stored theme, but system prefers dark
+            applyDark = true;
+          }
+          // If you want to DEFAULT to dark if nothing is set and system doesn't prefer dark:
+          // else if (storedTheme === null && !prefersDark) {
+          //  applyDark = true; // Default to dark
+          // }
+
+          if (applyDark) {
+            document.documentElement.classList.add("dark");
+            // No need to set localStorage here, your main ThemeToggle script will do that
+            // to keep it consistent if the user later toggles.
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {
+          // In case of any error (e.g., localStorage not available), do nothing or default
+          console.warn("Could not apply initial theme from inline script:", e);
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- Your portfolio content -->
@@ -316,16 +351,11 @@
             <div class="text-4xl font-bold mb-4">Contact</div>
             <p class="mt-2">
               Resume:
-              <a
-                target="_blank"
-                href="./resume.pdf"
-                class="underline hover:no-underline"
+              <a target="_blank" href="./resume.pdf" class="hover:underline"
                 >View</a
               >
               or
-              <a href="#" data-copy-resume class="underline hover:no-underline"
-                >Copy Link</a
-              >
+              <a href="#" data-copy-resume class="hover:underline">Copy Link</a>
               <span
                 data-copy-confirmation
                 class="ml-2 transition-opacity duration-500 opacity-0"
