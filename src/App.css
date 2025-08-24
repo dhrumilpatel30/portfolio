@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* Retro Color Palette */
+:root {
+  /* Original retro warm tones */
+  --retro-bg-light: #e8e4dd;
+  --retro-bg-dark: #0a0908;
+  --retro-text-light: #141310;
+  --retro-text-dark: #e8e4dd;
+  
+  /* Warm brown accent colors */
+  --retro-accent-light: #7d4b1d;
+  --retro-accent-light-hover: #5e3915;
+  --retro-accent-dark: #d9a469;
+  --retro-accent-dark-hover: #e3b989;
+}
+
 body {
   font-family: sans-serif; /* Fallback */
   opacity: 0; /* Initially hide to prevent FOUT */
@@ -34,26 +49,22 @@ html {
   overflow-y: auto;
   font-family: "Commissioner", sans-serif;
 }
-/* Fix: Ensure the main container covers full viewport */
+
+/* Original retro backgrounds */
 html {
-  background-color: #e8e4dd; /* Light theme default background */
-  color: #141310;           /* Light theme default text color */
+  background-color: var(--retro-bg-light);
+  color: var(--retro-text-light);
 }
 
 html.dark {
-  background-color: #0a0908; /* Dark theme default background */
-  color: #e8e4dd;           /* Dark theme default text color */
-}
-.shiny {
-  min-height: 100vh; /* Add this to ensure full coverage */
-  background-color: #e8e4dd;
-  color: #141310;
+  background-color: var(--retro-bg-dark);
+  color: var(--retro-text-dark);
 }
 
-.dark .shiny {
-  min-height: 100vh; /* Add this to ensure full coverage */
-  background-color: #0a0908;
-  color: #e8e4dd;
+.shiny {
+  min-height: 100vh;
+  background: transparent;
+  position: relative;
 }
 
 section {
@@ -75,8 +86,20 @@ section {
 }
 
 .heading-section {
-  border-left: 1px solid;
+  border-left: 1px solid var(--retro-accent-light);
+  padding-left: 3rem;
+  margin-left: 2rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.dark .heading-section {
+  border-left-color: var(--retro-accent-dark);
+}
+
+
 
 .heading-text {
   font-size: 5rem;
@@ -90,23 +113,37 @@ li {
   margin-bottom: 0.4rem;
 }
 
+/* About section alignment */
+#about .container {
+  display: flex;
+  align-items: center;
+  min-height: 40vh;
+}
+
 @media (max-width: 640px) {
   .about-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    background: transparent;
+    display: block;
+  }
+
+  #about .container {
+    min-height: auto;
+    display: block;
   }
 
   .container {
     font-size: 1.1rem;
   }
+  
   .heading-text {
     font-size: 3.3rem;
+    margin-bottom: 2rem;
   }
 
   .heading-section {
     border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+    min-height: auto;
   }
 
   .left-side {
@@ -158,22 +195,23 @@ li {
   z-index: 1;
 }
 
+/* Links - Original retro colors */
 a {
-  color: #7d4b1d;
+  color: var(--retro-accent-light);
   transition: color 0.2s ease;
 }
 
 .dark a {
-  color: #d9a469;
+  color: var(--retro-accent-dark);
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #5e3915;
+  color: var(--retro-accent-light-hover);
 }
 
 .dark a:hover {
-  color: #e3b989;
+  color: var(--retro-accent-dark-hover);
 }
 
 /* Text Highlight Styles */
@@ -200,4 +238,58 @@ a:hover {
   padding: 0 0.2rem;
   border-radius: 3px;
   color: inherit;
+}
+
+
+
+/* Current company highlighting - matches link color */
+.company-current {
+  color: var(--retro-accent-light);
+}
+
+.dark .company-current {
+  color: var(--retro-accent-dark);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  background: rgba(232, 228, 221, 0.9);
+  border: 1px solid var(--retro-accent-light);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--retro-accent-light);
+}
+
+.dark .theme-toggle {
+  background: rgba(10, 9, 8, 0.9);
+  border-color: var(--retro-accent-dark);
+  color: var(--retro-accent-dark);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .theme-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
 }

@@ -9,7 +9,7 @@ export class ThemeToggle {
 
   private init(): void {
     this.setInitialTheme();
-    this.createToggleButton();
+    this.bindExistingButton();
   }
 
   private setInitialTheme(): void {
@@ -18,7 +18,8 @@ export class ThemeToggle {
     if (storedTheme) {
       this.isDarkMode = storedTheme === "dark";
     } else {
-      this.isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      // Default to light mode instead of system preference
+      this.isDarkMode = false;
     }
 
     this.applyTheme();
@@ -34,18 +35,13 @@ export class ThemeToggle {
     }
   }
 
-  private createToggleButton(): void {
-    const container = document.createElement("div");
-    container.className = "fixed top-4 right-4 sm:right-9 z-10";
-
-    this.button = document.createElement("button");
-    this.button.className = "p-2 rounded-full hover:bg-gray-200/10 dark:hover:bg-gray-800/10 transition-colors";
-    this.button.setAttribute("aria-label", this.getAriaLabel());
-    this.button.innerHTML = this.getIconSVG();
-    this.button.addEventListener("click", () => this.toggle());
-
-    container.appendChild(this.button);
-    document.body.appendChild(container);
+  private bindExistingButton(): void {
+    this.button = document.getElementById("theme-toggle") as HTMLButtonElement;
+    if (this.button) {
+      this.button.innerHTML = this.getIconSVG();
+      this.button.setAttribute("aria-label", this.getAriaLabel());
+      this.button.addEventListener("click", () => this.toggle());
+    }
   }
 
   private toggle(): void {
@@ -64,10 +60,15 @@ export class ThemeToggle {
   }
 
   private getMoonIcon(): string {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-300"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>`;
+    return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+    </svg>`;
   }
 
   private getSunIcon(): string {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-800"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>`;
+    return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"></circle>
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+    </svg>`;
   }
 }

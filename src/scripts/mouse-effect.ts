@@ -17,7 +17,7 @@ export class MouseEffect {
     document.body.appendChild(this.overlay);
   }
 
-  private addEventListeners(): void {
+    private addEventListeners(): void {
     document.addEventListener("mousemove", this.handleMouseMove.bind(this));
   }
 

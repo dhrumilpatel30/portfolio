@@ -16,14 +16,10 @@
             applyDark = true;
           } else if (storedTheme === "light") {
             applyDark = false;
-          } else if (prefersDark) {
-            // No stored theme, but system prefers dark
-            applyDark = true;
+          } else {
+            // Default to light mode regardless of system preference
+            applyDark = false;
           }
-          // If you want to DEFAULT to dark if nothing is set and system doesn't prefer dark:
-          // else if (storedTheme === null && !prefersDark) {
-          //  applyDark = true; // Default to dark
-          // }
 
           if (applyDark) {
             document.documentElement.classList.add("dark");
@@ -40,8 +36,25 @@
     </script>
   </head>
   <body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="12" cy="12" r="5"></circle>
+        <path
+          d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+        ></path>
+      </svg>
+    </button>
+
     <!-- Your portfolio content -->
-    <div class="shiny min-h-screen dark:bg-[#100e05] dark:text-[#ccc8c1]">
+    <div class="shiny min-h-screen">
       <div class="body-full">
         <!-- About Section -->
         <section id="about" class="flex">
@@ -65,13 +78,53 @@
         <!-- Experience Section -->
         <section id="experience" class="flex">
           <div class="container">
-            <div class="text-4xl font-bold">Experience</div>
+            <div class="text-4xl font-bold mb-6">Experience</div>
+            <div class="mt-6 grid gap-4">
+              <div>
+                <div class="text-3xl font-semibold pb-3">
+                  MasterCard
+                  <span class="text-sm font-normal company-current"
+                    >(Current)</span
+                  >
+                </div>
+                <div class="experience-card">
+                  <div>
+                    <p class="font-bold text-lg">Software Engineer 1</p>
+                    <p>
+                      <strong>Apache Spark</strong>, <strong>Hadoop</strong>,
+                      <strong>Big Data</strong>,
+                      <strong>Data Integrity</strong>
+                    </p>
+                  </div>
+                  <div class="left-side">
+                    <p class="font-medium">June 2025 - Present</p>
+                    <p>Vadodara, Gujarat</p>
+                  </div>
+                </div>
+                <div class="small-text">
+                  <ul class="list-disc mt-5 ms-5">
+                    <li>
+                      Running <strong>Spark jobs</strong> on
+                      <strong>Hadoop clusters</strong> and transforming
+                      <strong>SQL queries</strong> for data processing.
+                    </li>
+                    <li>
+                      Working on <strong>data integrity projects</strong> to
+                      ensure transaction data quality.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div class="mt-6 grid gap-4">
               <div>
                 <div class="text-3xl font-semibold pb-3">Pleasantbiz</div>
                 <div class="experience-card">
                   <div>
-                    <p>Software Engineer (Part-time + Intern)</p>
+                    <p class="font-bold text-lg">
+                      Software Engineer (Part-time + Intern)
+                    </p>
                     <p>
                       <strong>Frappe</strong>, <strong>Python</strong>,
                       <strong>Azure</strong>, <strong>Ory</strong>,
@@ -80,7 +133,7 @@
                     </p>
                   </div>
                   <div class="left-side">
-                    <p>Sep 2024 - Apr 2025 (8 months)</p>
+                    <p class="font-medium">Sep 2024 - Apr 2025 (8 months)</p>
                     <p>Remote</p>
                   </div>
                 </div>
@@ -141,7 +194,7 @@
                 <div class="text-3xl font-semibold pb-3">MasterCard</div>
                 <div class="experience-card">
                   <div>
-                    <p>Software Engineering Intern</p>
+                    <p class="font-bold text-lg">Software Engineering Intern</p>
                     <p>
                       <strong>Spring boot</strong>, <strong>React</strong>,
                       <strong>PCF</strong>, <strong>Oracle</strong>,
@@ -149,7 +202,7 @@
                     </p>
                   </div>
                   <div class="left-side">
-                    <p>May 2024 - July 2024 (2 months)</p>
+                    <p class="font-medium">May 2024 - July 2024 (2 months)</p>
                     <p>Vadodara, Gujarat</p>
                   </div>
                 </div>
@@ -191,7 +244,7 @@
                 <div class="text-3xl font-semibold pb-3">KrewBee</div>
                 <div class="experience-card">
                   <div>
-                    <p>Software Engineer, Backend</p>
+                    <p class="font-bold text-lg">Software Engineer, Backend</p>
                     <p>
                       <strong>Dotnet</strong>, <strong>Postgres</strong>,
                       <strong>Docker</strong>, <strong>Azure</strong>,
@@ -199,7 +252,7 @@
                     </p>
                   </div>
                   <div class="left-side">
-                    <p>Dec 2023 - April 2024 (5 months)</p>
+                    <p class="font-medium">Dec 2023 - April 2024 (5 months)</p>
                     <p>Remote (Part-time)</p>
                   </div>
                 </div>
@@ -242,26 +295,13 @@
         <!-- Projects Section -->
         <section id="projects" class="flex">
           <div class="container">
-            <div class="text-4xl font-bold">
-              Projects
-              <span class="text-lg ps-2 font-medium">
-                (More on
-                <a
-                  class="font-bold hover:underline text-blue-600 dark:text-blue-400"
-                  target="_blank"
-                  href="https://github.com/dhrumilpatel30"
-                >
-                  GitHub
-                </a>
-                )
-              </span>
-            </div>
+            <div class="text-4xl font-bold mb-6">Projects</div>
             <div class="mt-6 grid gap-4">
               <div>
                 <div class="text-3xl font-semibold">
                   PuzzlePro
                   <a
-                    class="font-bold text-lg ps-2 hover:underline text-blue-600 dark:text-blue-400"
+                    class="text-sm ps-2 hover:underline"
                     target="_blank"
                     href="https://github.com/PuzzleproAI"
                   >
@@ -304,13 +344,23 @@
                 </div>
               </div>
             </div>
+            <p class="text-lg font-medium mt-8">
+              More on
+              <a
+                class="hover:underline"
+                target="_blank"
+                href="https://github.com/dhrumilpatel30"
+              >
+                GitHub
+              </a>
+            </p>
           </div>
         </section>
 
         <!-- Education Section -->
         <section id="education" class="flex">
           <div class="container">
-            <div class="text-4xl font-bold">Education</div>
+            <div class="text-4xl font-bold mb-6">Education</div>
             <div class="mt-6 grid gap-4">
               <div>
                 <div class="text-3xl font-semibold pb-2">
@@ -327,7 +377,7 @@
                     </p>
                   </div>
                   <div class="left-side">
-                    <p>October 2021 to May 2025</p>
+                    <p class="font-medium">October 2021 to May 2025</p>
                     <p>Nadiad, Gujarat</p>
                   </div>
                 </div>
@@ -348,7 +398,7 @@
         <!-- Contact Section -->
         <section id="contact" class="flex">
           <div class="container">
-            <div class="text-4xl font-bold mb-4">Contact</div>
+            <div class="text-4xl font-bold mb-6">Contact</div>
             <p class="mt-2">
               Resume:
               <a target="_blank" href="./resume.pdf" class="hover:underline"
